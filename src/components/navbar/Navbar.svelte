@@ -1,3 +1,11 @@
+
+<script>
+    import Router from 'svelte-spa-router'
+import {routes} from '../../../routes/router'
+import login  from '../../views/Login.svelte'
+</script>
+
+
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
@@ -31,7 +39,7 @@
             <a href class="button is-primary">
               <strong>Sign up</strong>
             </a>
-            <a href class="button is-light">
+            <a href="{{login}}" class="button is-light">
               Log in
             </a>
 
@@ -44,3 +52,4 @@
       </div>
     </div>
   </nav>
+  <Router {routes}/>
